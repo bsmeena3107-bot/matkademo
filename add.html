@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Fund</title>
+<style>
+body{font-family:Arial;background:#fff8dc}
+.top{background:#ffc107;padding:15px;font-size:20px}
+.card{background:#fff;margin:20px;padding:20px;border-radius:10px}
+input,button{width:100%;padding:10px;margin-top:10px}
+button{background:#ffc107;border:none}
+</style>
+</head>
+<body>
+
+<div class="top">Add Fund</div>
+
+<div class="card">
+  <input id="amount" type="number" placeholder="Enter coins">
+  <input id="txn" placeholder="Transaction / UPI Number">
+  <input id="img" type="file" accept="image/*">
+  <button onclick="sendRequest()">Submit</button>
+
+  <p id="msg"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

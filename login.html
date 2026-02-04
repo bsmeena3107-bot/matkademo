@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login System</title>
+  <style>
+    body{
+      font-family: Arial;
+      background:#fff8dc;
+    }
+    .box{
+      width:300px;
+      margin:50px auto;
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 0 10px #999;
+    }
+    input,button{
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+    }
+    button{
+      background:#ffc107;
+      border:none;
+      font-size:16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Login</h3>
+  <input id="luser" placeholder="Username">
+  <input id="lpass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="box">
+  <h3>Create Account</h3>
+  <input id="ruser" placeholder="New Username">
+  <input id="rpass" type="password" placeholder="New Password">
+  <button onclick="register()">Create Account</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

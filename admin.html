@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<style>
+body{font-family:Arial;background:#f4f4f4;margin:0}
+.top{background:#000;color:#fff;padding:15px;font-size:20px}
+.section{background:#fff;margin:15px;padding:15px;border-radius:10px}
+table{width:100%;border-collapse:collapse}
+td,th{border:1px solid #ccc;padding:8px;text-align:center}
+button{padding:6px 12px;cursor:pointer}
+.approve{background:green;color:#fff}
+.reject{background:red;color:#fff}
+</style>
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("role")!=="admin"){
+  alert("Admin only");
+  location="login.html";
+}
+</script>
+
+<div class="top">
+  ADMIN PANEL
+  <button style="float:right" onclick="logout()">Logout</button>
+</div>
+
+<!-- USERS -->
+<div class="section">
+<h3>👤 Users Control</h3>
+<table id="userTable"></table>
+</div>
+
+<!-- ADD FUND -->
+<div class="section">
+<h3>💰 Add Fund Requests</h3>
+<div id="fundList"></div>
+</div>
+
+<!-- WITHDRAW -->
+<div class="section">
+<h3>🏦 Withdraw Requests</h3>
+<div id="withdrawList"></div>
+</div>
+
+<!-- GAME RATES -->
+<div class="section">
+<h3>🎮 Game Rates</h3>
+<select id="gtype">
+<option value="single">Single Ank</option>
+<option value="jodi">Jodi</option>
+<option value="singlep">Single Panna</option>
+<option value="doublep">Double Panna</option>
+<option value="triplep">Triple Panna</option>
+</select>
+<input id="grate" placeholder="Enter Rate">
+<button onclick="saveRate()">Save Rate</button>
+<p id="rateMsg"></p>
+</div>
+
+<!-- RESULT DECLARATION -->
+<div class="section">
+<h3>📢 Declare Game Result</h3>
+<input id="gameName" placeholder="Game Name">
+<input id="gameResult" placeholder="Winning Number">
+<button onclick="declareResult()">Declare</button>
+<p id="resultMsg"></p>
+</div>
+
+<script src="app.js"></script>
+<script>
+loadUsers();
+loadFundRequests();
+loadWithdrawRequests();
+</script>
+
+</body>
+</html>

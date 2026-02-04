@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+if(!localStorage.getItem("loggedUser")){
+  window.location.href = "login.html";
+}
+</script>
+
+<div class="topbar">☰ Play Matka Online <span style="float:right">₹ <span id="bal"></span></span></div>
+
+<div class="btn-row">
+  <div class="btn" onclick="go('add.html')">Add Fund</div>
+  <div class="btn" onclick="go('withdraw.html')">Withdraw</div>
+  <div class="btn">Support</div>
+  <div class="btn">Download App</div>
+</div>
+
+<div class="card">
+  <b>#1 Matka Play Application</b>
+</div>
+
+<div id="games"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Withdraw Fund</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">Withdraw Fund</div>
+
+<div class="card">
+  <p>Withdrawal may take up to 24 hours</p>
+  <p style="color:red">Sunday withdrawal off</p>
+
+  <input id="wname" placeholder="Account Holder Name">
+  <input id="wacc" placeholder="Bank Account Number">
+  <input id="wifsc" placeholder="IFSC Code">
+  <input id="wupi" placeholder="UPI ID (optional)">
+  <input id="wamt" type="number" placeholder="Withdraw Amount">
+
+  <button onclick="sendWithdraw()">Request Withdraw</button>
+
+  <p id="wmsg" style="text-align:center;margin-top:10px"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
