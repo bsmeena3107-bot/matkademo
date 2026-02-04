@@ -1,14 +1,53 @@
-body{margin:0;font-family:Arial;background:#fff8d6}
-.topbar{background:#ffc107;color:#000;padding:12px;font-size:20px}
-.btn-row{display:flex;gap:10px;padding:10px}
-.btn{flex:1;background:#ffd54f;padding:12px;text-align:center;
-border-radius:10px;font-weight:bold;cursor:pointer}
-.card{background:#fff;margin:10px;padding:12px;border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,.15)}
-.game-row{display:flex;justify-content:space-between;align-items:center}
-.play{background:#ffca28;padding:8px 14px;border-radius:20px}
-input,select{width:100%;padding:10px;margin-top:8px}
-button{padding:10px;width:100%;background:#ffc107;border:none;
-font-size:16px;border-radius:8px}
-.win{color:green;font-weight:bold}
-.lose{color:red;font-weight:bold}
+*{box-sizing:border-box;font-family:Arial;margin:0;padding:0}
+body{background:#fff8dc;padding-bottom:80px}
+.topbar{
+  background:#ffc107;
+  padding:14px;
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  position:sticky;top:0;z-index:9;
+}
+.card{
+  background:#fff;
+  margin:12px;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+input,select,button{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  font-size:16px;
+}
+button{
+  background:#ffc107;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+button:active{transform:scale(.97)}
+.game-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.play{
+  background:green;color:#fff;
+  padding:8px 14px;border-radius:6px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  display:block;
+  overflow-x:auto;
+}
+td,th{
+  border:1px solid #ccc;
+  padding:8px;
+  text-align:center;
+}
+.approve{background:green;color:#fff}
+.reject{background:red;color:#fff}
+img{max-width:100%;border-radius:8px}
